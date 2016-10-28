@@ -1,0 +1,170 @@
+@import 'foundation/all';
+@import 'modules/home';
+
+body {
+  @include body-copy();
+}
+
+.app-header {
+  background: $alt-color;
+  color: $contrast-color;
+  padding: unit-space(2) 0;
+  ul {
+    li {
+      display: block;
+      text-align: center;
+      // &.optional {
+      //   display: none;
+      // }
+    }
+    @include tablet() {
+      text-align: left;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include desktop() {
+      li.optional {
+        display: block;
+      }
+    }
+    @include mobileOnly() {
+      br {
+        display: none;
+      }
+      li {
+        margin: unit-space(0.5) 0;
+      }
+      .button {
+        margin-top: unit-space(1);
+      }
+    }
+  }
+  .logo {
+    color: #fff;
+  }
+  li {
+    &:first-child {
+      align-self: flex-start;
+    }
+    em {
+      color: $main-color;
+      font-style: normal;
+      font-weight: bold;
+    }
+    .button {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+}
+
+.logo {
+  line-height: 75px;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: left;
+
+  strong {
+    font-weight: bold;
+  }
+
+  &:before {
+    background: url(images/rx-logo.png) no-repeat;
+    background-size: 75px 75px;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    float: left;
+    content: "";
+    margin-right: unit-space(1);
+  }
+
+  @include mobileOnly() {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 40px;
+    &:before {
+      background-size: 40px 40px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.app-footer {
+  .contact {
+    border-top: 1px solid $contrast-color;
+    border-bottom: 1px solid $contrast-color;
+    padding: unit-space(1);
+    .subscribe-form {
+      h2 {
+        color: $main-color;
+      }
+      .input-text {
+        border-color: $main-color;
+        margin: unit-space(1) 0;
+      }
+      .button {
+        color: $main-color;
+        border-color: $main-color;
+        font-size: $body-size;
+      }
+    }
+    .email-us {
+      font-style: italic;
+      a {
+        color: $main-color;
+      }
+    }
+    @include mobileOnly() {
+      text-align: center;
+      padding-top: unit-space(2);
+      .email-us {
+        margin: unit-space(2) 0;
+      }
+    }
+    @include tablet() {
+      .subscribe-form {
+        padding: unit-space(1);
+        border-right: 1px solid $contrast-color;
+      }
+      .email-us {
+        padding: unit-space(1);
+      }
+    }
+    @include desktop() {
+      .subscribe-form, .email-us {
+        padding: unit-space(3) unit-space(2);
+      }
+      .subscribe-form .input-text {
+        width: 80%;
+        margin-right: unit-space(1);
+      }
+    }
+  }
+  .branding {
+    padding: unit-space(1) 0;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include desktop() {
+      padding: unit-space(2) 0;
+      .brand-text {
+        margin-left: unit-space(2);
+        max-width: 38%;
+      }
+    }
+  }
+}
+
+.this-dot-logo {
+  background: url(images/this-dot-media-logo-small.svg) no-repeat;
+  width: 118px;
+  height: 118px;
+  background-size: contain;
+  text-indent: -10000px;
+  overflow: hidden;
+  display: inline-block;
+}

@@ -1,0 +1,119 @@
+section.about {
+  background: #F2F2F2 linear-gradient(90deg, #fff, #F2F2F2);
+  padding: unit-space(2) 0;
+
+  @include desktop() {
+    padding: unit-space(5) 0;
+  }
+
+  h2 {
+    color: $main-color;
+  }
+
+  .content-box {
+    padding: unit-space(1);
+    border: 3px solid $main-color;
+    @include tablet() {
+      padding: unit-space(2);
+    }
+  }
+
+  aside {
+    p {
+      color: saturate($main-color, 20);
+      font-style: italic;
+    }
+    footer {
+      color: darken($main-color, 20);
+    }
+    @include tablet() {
+      padding: unit-space(3) unit-space(2);
+      padding: unit-space(2);
+    }
+  }
+}
+
+section.instructor {
+  padding: unit-space(2) 0;
+  color: $contrast-color;
+  background: $alt-color;
+
+  @include mobileOnly() {
+    background: linear-gradient(0deg, $alt-color 70%, rgba($alt-color, 0) 80%), url(images/ben.jpg) no-repeat center top;
+    background-size: contain;
+    padding-top: 50%;
+  }
+
+  @include tablet() {
+    background: linear-gradient(90deg, $alt-color 50%, rgba($alt-color, 0) 60%), url(images/ben.jpg) no-repeat right center;
+  }
+
+  @include desktop() {
+    background: linear-gradient(90deg, $alt-color 60%, rgba($alt-color, 0) 70%), url(images/ben.jpg) no-repeat right center;
+    padding: unit-space(5) 0;
+    background-size: contain;
+  }
+
+  .main-col {
+    padding: unit-space(1);
+    @include tablet() {
+      padding: unit-space(2);
+    }
+  }
+
+  h2 {
+    color: $main-color;
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 32px;
+  }
+}
+
+section.workshops {
+  @extend section.about;
+  h2 {
+    padding: unit-space(1) unit-space(2);
+    @include desktop() {
+      padding: unit-space(1) unit-space(3);
+    }
+  }
+  .workshops-list {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: unit-space(1) 0;
+  }
+  .workshop {
+    border: 3px solid $main-color;
+    text-align: center;
+    margin: unit-space(1) 0;
+    min-width: 200px;
+    h4 {
+      background: $main-color;
+      color: #fff;
+      padding: unit-space(0.5) unit-space(1);
+      text-transform: uppercase;
+    }
+    dl {
+      padding: unit-space(1);
+      dt {
+        display: none;
+      }
+      dd {
+        padding: unit-space(1) 0 0 0;
+      }
+    }
+    .button {
+      color: $main-color;
+      border-color: $main-color;
+      margin: unit-space(1);
+    }
+    &.sillicon-valley {
+      border-color: $alt-color;
+      h4 {
+        background: $alt-color;
+      }
+    }
+  }
+}
