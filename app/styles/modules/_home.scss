@@ -17,6 +17,10 @@ section.about {
     }
     footer {
       color: darken($main-color, 20);
+      font-size: 18px;
+    }
+    strong {
+      font-weight: bold;
     }
     @include tablet() {
       padding: unit-space(3) unit-space(2);
@@ -198,5 +202,11 @@ section.extra-info {
     h2 {
       color: $extra-alt;
     }
+  }
+
+  a {
+    color: $alt-color;
+    text-decoration: none;
+    border-bottom: 1px solid $alt-color;
   }
 }
