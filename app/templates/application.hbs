@@ -172,11 +172,13 @@
 
 <footer class="app-footer wrap">
   <div class="contact row">
-    <form class="subscribe-form main-col">
-      <h2>Subscribe and stay up to date on the latest RxJS news.</h2>
-      <input type="text" name="name" value="" class="input-text">
-      <button type="button" name="button" class="button">Go</button>
-    </form>
+    {{ember-chimp 
+        label="Subscribe and stay up to date on the latest RxJS news."
+        classNames="subscribe-form main-col" 
+        formAction="//embersherpa.us12.list-manage.com/subscribe/post?u=81e8e3fa2a6f79fe97467029a&amp;id=3e4c4e8e8f"
+        buttonText="Go"
+    }}
+
     <aside class="aside-col email-us">
       Have questions? We're here for you. <br>
       <a mailto="hi@rxworkshop.com">hi@rxworkshop.com</a>
