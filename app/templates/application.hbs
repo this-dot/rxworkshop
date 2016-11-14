@@ -4,7 +4,9 @@
       <li><h1 class="logo"><strong>Rx</strong> Workshop</h1></li>
       <li>Instructor: <br><em>Ben Lesh</em></li>
       <li><em>Online</em> <br>Sillicon Valley</li>
-      <li><a href="#" class="button">Register</a></li>
+      <li>
+        {{scroll-to href='#available-workshops' label='Register' class='button'}}
+      </li>
     </ul>
   </div>
 </header>
@@ -79,7 +81,7 @@
   </div>
 </section>
 
-<section class="workshops">
+<section class="workshops" id="available-workshops">
   <div class="wrap">
     <h1>Upcoming Workshops</h1>
 
@@ -138,7 +140,7 @@
     <div class="content-box main-col">
       <h2>This course is perfect for:</h2>
       <p>
-        We designed to teach participants to reactive patterns, practice stream composition and think reactively with RxJS. The patterns that you 
+        We designed to teach participants to reactive patterns, practice stream composition and think reactively with RxJS. The patterns that you
         learn apply to all reactive environments and can be used in JavaScript with React, Angular and Node.
       </p>
       <p>
@@ -172,9 +174,9 @@
 
 <footer class="app-footer wrap">
   <div class="contact row">
-    {{ember-chimp 
+    {{ember-chimp
         label="Subscribe and stay up to date on the latest RxJS news."
-        classNames="subscribe-form main-col" 
+        classNames="subscribe-form main-col"
         formAction="//embersherpa.us12.list-manage.com/subscribe/post?u=81e8e3fa2a6f79fe97467029a&amp;id=3e4c4e8e8f"
         buttonText="Go"
     }}
@@ -189,9 +191,7 @@
       <a href="https://www.thisdot.co" class="this-dot-logo">This Dot Media</a>
       <div class="brand-text">
         Growing the web platform through developer education, shared tooling and facilitating cross-community collaboration.<br>
-        <a href="https://www.thisdot.co/media">Media</a> | <a href="https://www.thisdot.co/labs">Labs</a> | <a href="https://www.thisdot.co/contact">Contact</a>
       </div>
     </div>
-
   </div>
 </footer>
