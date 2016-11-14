@@ -43,7 +43,19 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.APP.analytics = {
+      integrations: [
+        {
+          name: 'GoogleAnalytics',
+          config: {
+            id: 'UA-87303561-2',
+            remarketing: true,
+            ecommerce: true,
+            enhancedEcommerce: false
+          }
+        }
+      ]
+    };
   }
 
   return ENV;
