@@ -10,14 +10,6 @@ section.about {
     color: $main-color;
   }
 
-  .content-box {
-    padding: unit-space(1);
-    border: 3px solid $main-color;
-    @include tablet() {
-      padding: unit-space(2);
-    }
-  }
-
   aside {
     p {
       color: saturate($main-color, 20);
@@ -25,10 +17,64 @@ section.about {
     }
     footer {
       color: darken($main-color, 20);
+      font-size: 18px;
+    }
+    strong {
+      font-weight: bold;
     }
     @include tablet() {
       padding: unit-space(3) unit-space(2);
       padding: unit-space(2);
+    }
+  }
+}
+
+.content-box {
+  padding: unit-space(1);
+  border: 3px solid $main-color;
+  @include tablet() {
+    padding: unit-space(2);
+  }
+}
+
+.extra-box {
+  padding: unit-space(1);
+  @include tablet() {
+    padding: unit-space(2);
+  }
+}
+
+section.youll-learn {
+  background: desaturate($main-color, 15);
+  padding: 50px 0;
+  text-align: center;
+  h2 {
+    color: #fff;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #fff;
+    padding: 5px;
+    display: inline-block;
+  }
+
+  ul {
+    li {
+      color: #fff;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  }
+  strong {
+    font-weight: bold;
+  }
+
+  @include tablet() {
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      li {
+        width: 300px;
+      }
     }
   }
 }
@@ -68,15 +114,20 @@ section.instructor {
   h3 {
     color: #fff;
     font-size: 32px;
+    margin-top: 20px;
   }
 }
 
 section.workshops {
   @extend section.about;
-  h2 {
+  h1 {
+    @extend h2;
     padding: unit-space(1) unit-space(2);
+    border-bottom: 2px solid $main-color;
+    padding: 5px;
+    display: inline-block;
     @include desktop() {
-      padding: unit-space(1) unit-space(3);
+      margin: unit-space(1) unit-space(3);
     }
   }
   .workshops-list {
@@ -115,5 +166,47 @@ section.workshops {
         background: $alt-color;
       }
     }
+  }
+  .private-workshop {
+    text-align: center;
+    p {
+      display: inline-block;
+      padding: 20px 5px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+    }
+    strong {
+      font-weight: bold;
+    }
+    a {
+      color: $main-color;
+      text-decoration: none;
+      border-bottom: 1px solid $main-color;
+      font-weight: bold;
+    }
+  }
+}
+
+section.extra-info {
+  @extend .about;
+  padding-top: 0;
+
+  $extra-alt:  saturate($alt-color, 20);
+  h2 {
+    color: $extra-alt;
+  }
+  .content-box {
+    border-color: $extra-alt;
+  }
+  .extra-box {
+    h2 {
+      color: $extra-alt;
+    }
+  }
+
+  a {
+    color: $alt-color;
+    text-decoration: none;
+    border-bottom: 1px solid $alt-color;
   }
 }
