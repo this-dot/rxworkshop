@@ -20,6 +20,10 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    moment: {
+      includeTimezone: 'all'
     }
   };
 
@@ -43,7 +47,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.analytics = {
+    ENV.analytics = {
       integrations: [
         {
           name: 'GoogleAnalytics',

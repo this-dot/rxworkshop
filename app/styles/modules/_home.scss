@@ -120,6 +120,8 @@ section.instructor {
 
 section.workshops {
   @extend section.about;
+  padding: unit-space(1) 0;
+  text-align: center;
   h1 {
     @extend h2;
     padding: unit-space(1) unit-space(2);
@@ -129,6 +131,9 @@ section.workshops {
     @include desktop() {
       margin: unit-space(1) unit-space(3);
     }
+  }
+  small {
+    font-size: 80%;
   }
   .workshops-list {
     justify-content: space-between;
@@ -160,11 +165,26 @@ section.workshops {
       border-color: $main-color;
       margin: unit-space(1);
     }
-    &.sillicon-valley {
+    &.silicon-valley {
       border-color: $alt-color;
       h4 {
         background: $alt-color;
       }
+    }
+  }
+  @include tablet() {
+    .workshops-list {
+      justify-content: center;
+    }
+    .workshop {
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+    }
+  }
+  @include desktop() {
+    .workshop {
+      margin-left: 5%;
+      margin-right: 5%;
     }
   }
   .private-workshop {

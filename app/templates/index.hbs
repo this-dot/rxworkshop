@@ -1,0 +1,123 @@
+<section class="about">
+  <div class="wrap row">
+    <div class="content-box main-col">
+      <h2>Managing Async With RxJS 5: Course Overview</h2>
+      <p>This is a 3 part course complete with pre-course videos, an interactive workshop day, and post workshop support.</p>
+      <p>Learn about RxJS 5 and Observables in-depth, and using RxJS to manage common and complex async scenarios within an application.</p>
+      <p>
+        Thinking in functional reactive programming can be difficult, but we will give you some fundamentals to go about composing streams.
+      </p>
+      <p>
+        At the end of this course you'll have built an application that uses both HTTP and WebSockets to create a realtime streaming application.
+      </p>
+    </div>
+
+    <aside class="quotes aside-col">
+      <blockquote>
+        <p>
+          No better way to learn than from the guy who actually writes RxJS itself, plus Ben have a really cool way to teach you complex stuff in a down to earth way.
+        </p>
+        <footer>
+          &mdash; <strong>Shai Reznik</strong>, HiRez.io
+        </footer>
+      </blockquote>
+      <blockquote>
+        <p>
+          RxJS is a critical component of Angular 2, and a must learn for anyone who wants to use Angular 2. Ben Lesh is definitely the guy I'd choose to teach me.
+        </p>
+        <footer>
+          &mdash; <strong>Joe Eames</strong>, Software Craftsman, Pluralsight Author, and ng-conf Organizer.
+        </footer>
+      </blockquote>
+    </aside>
+  </div>
+</section>
+
+<section class="youll-learn">
+  <div class="wrap">
+    <h2>What You'll Learn</h2>
+    <ul>
+      <li>What an <strong>observable</strong> is and how to create one.</li>
+      <li>What an <strong>operator</strong> is and you'll create a custom operator.</li>
+      <li>How to think <strong>"reactively"</strong>, the fundamentals.</li>
+      <li>How to use Rx to <strong>manage resources</strong> and <strong>application flow</strong>.</li>
+      <li>How to <strong>debug</strong> your observable chains.</li>
+      <li>How to use <strong>complex operators</strong> like catch and retry.</li>
+      <li>How to integrate RxJS with frameworks such as <strong>React</strong> and <strong>Angular 2</strong>.</li>
+      <li>How to ensure system <strong>stability</strong>.</li>
+      <li>Join a growing community of <strong>reactive programming experts</strong>.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="instructor">
+  <div class="wrap row">
+    <div class="main-col">
+      <h2>Your instructor</h2>
+      <h3>Ben Lesh</h3>
+      <p>
+        Ben Lesh is the lead author and development lead of RxJS 5, which is a rewrite of RxJS with goals of better performance and JavaScript future specification compliance.
+      </p>
+      <p>
+        He is also the co-author of redux-observable and has contributed to various open source projects such as Angular.js and Redux.
+      </p>
+      <p>
+        In addition to advising the Angular team on their Rx integration, Ben is also a Senior Software Engineer at Netflix on the UI platform team and Founder of RxWorkshop.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="workshops" id="available-workshops">
+  <div class="wrap">
+    <h1>Upcoming Workshops</h1>
+
+    <div class="workshops-list row">
+      {{#each (sort-by "date" model) as |event|}}
+        {{workshop-card model=event}}
+      {{/each}}
+    </div>
+    <div class="private-workshop">
+      <p>
+        <strong>Need a private workshop?</strong> Request one <a href="mailto:hi@rxworkshop.com">here</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="extra-info">
+  <div class="wrap row">
+    <div class="content-box main-col">
+      <h2>This course is perfect for:</h2>
+      <p>
+        We designed to teach participants to reactive patterns, practice stream composition and think reactively with RxJS. The patterns that you
+        learn apply to all reactive environments and can be used in JavaScript with React, Angular and Node.
+      </p>
+      <p>
+        This course is for anyone who wants to gain profound understanding of reactive patterns and apply these patterns to solving complex challenges.
+      </p>
+    </div>
+    <div class="extra-box aside-col">
+      <h2>What videos are included?</h2>
+      <p>
+        This course includes 25 minutes of video content that introduces thinking reactively, breaks down the anatomy of an operator and describes must know operators.
+        After the workshop, you will receive a recording of your workshop.
+      </p>
+    </div>
+  </div>
+  <div class="wrap row">
+    <div class="extra-box main-col">
+      <h2>What is post workshop support?</h2>
+      <p>
+        Students will be granted access to two weeks of an open slack channel for direct support and ongoing questions during the implementation process of RxJS in your applications.
+      </p>
+    </div>
+    <div class="extra-box aside-col">
+      <h2>What do you need?</h2>
+      <p>
+        Node 5.0+ and Angular CLI (<code>npm install -g angular-cli@latest</code>).
+        Also download the  <a href="https://github.com/blesh/rxjs-workshop-angular" target="_blank">RxJS Workshop Angular repo</a> and have it set up
+      </p>
+    </div>
+  </div>
+</section>
