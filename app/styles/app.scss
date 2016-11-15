@@ -12,10 +12,7 @@ body {
   ul {
     li {
       display: block;
-      text-align: center;
-      // &.optional {
-      //   display: none;
-      // }
+      text-align: left;
     }
     @include tablet() {
       text-align: left;

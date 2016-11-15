@@ -120,6 +120,7 @@ section.instructor {
 
 section.workshops {
   @extend section.about;
+  padding: unit-space(1) 0;
   text-align: center;
   h1 {
     @extend h2;
