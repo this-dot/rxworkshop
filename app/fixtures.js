@@ -1,5 +1,7 @@
 import moment from 'moment';
-import {uuid} from 'ember-cli-uuid';
+import Ember from 'ember';
+
+const { guidFor } = Ember;
 
 const online = 'https://www.eventbrite.com/e/online-managing-async-with-rxjs-5-tickets-29383184897';
 const siliconValley = 'https://www.eventbrite.com/e/silicon-valley-managing-async-with-rxjs-5-tickets-29383246080';
@@ -38,9 +40,9 @@ function iso(date) {
 }
 
 function doc(type, attributes) {
-  return {
-    id: uuid(),
-    type,
-    attributes
-  };
+  let doc = {};
+  doc.id = guidFor(doc);
+  doc.type = type;
+  doc.attributes = attributes;
+  return doc;
 }
