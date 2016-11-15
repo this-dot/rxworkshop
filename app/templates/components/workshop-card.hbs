@@ -1,0 +1,13 @@
+<div class="workshop {{dasherize model.location}}">
+  <h4>{{model.location}}</h4>
+  <dl>
+    <dt>When:</dt>
+    <dd>
+      {{moment-format model.date 'MMM Do YYYY'}}<br>
+      <small>{{moment-format model.date 'ha z' timeZone='America/Los_Angeles'}}</small>
+    </dd>
+    <dt>Cost:</dt>
+    <dd>${{model.price}}</dd>
+  </dl>
+  <a href={{model.link}} class="button" target="_blank">Purchase</a>
+</div>
