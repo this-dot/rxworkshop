@@ -47,7 +47,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.analytics = {
+    ENV.analytics = {
       integrations: [
         {
           name: 'GoogleAnalytics',
