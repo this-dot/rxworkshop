@@ -17,7 +17,7 @@ export default {
         date: iso(date),
         price: 595,
         location: 'Silicon Valley',
-        link: online
+        link: siliconValley
       })
     ),
     [
@@ -29,7 +29,7 @@ export default {
         date: iso(date),
         price: 495,
         location: 'Online',
-        link: siliconValley
+        link: online
       })
     )
   )
