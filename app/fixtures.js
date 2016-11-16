@@ -9,9 +9,9 @@ const siliconValley = 'https://www.eventbrite.com/e/silicon-valley-managing-asyn
 export default {
   data: [].concat(
     [
-      '2017-03-03 09:00:00',
-      '2017-06-23 09:00:00',
-      '2017-09-15 09:00:00'
+      '2017-03-03 08:00:00',
+      '2017-06-23 08:00:00',
+      '2017-09-15 08:00:00'
     ].map( 
       date => doc('event', {
         date: iso(date),
@@ -21,9 +21,9 @@ export default {
       })
     ),
     [
-      '2017-01-19 09:00:00',
-      '2017-04-13 09:00:00',
-      '2017-08-10 09:00:00'            
+      '2017-01-19 08:00:00',
+      '2017-04-13 08:00:00',
+      '2017-08-10 08:00:00'            
     ].map(
       date => doc('event', {
         date: iso(date),
