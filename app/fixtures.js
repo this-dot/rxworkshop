@@ -4,7 +4,7 @@ import Ember from 'ember';
 const { guidFor } = Ember;
 
 const online = 'https://www.eventbrite.com/e/online-managing-async-with-rxjs-5-tickets-29383184897';
-const siliconValley = 'https://www.eventbrite.com/e/Sillicon-valley-managing-async-with-rxjs-5-tickets-29383246080';
+const siliconValley = 'https://www.eventbrite.com/e/silicon-valley-managing-async-with-rxjs-5-tickets-29383246080';
 
 export default {
   data: [].concat(
