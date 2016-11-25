@@ -120,7 +120,7 @@ section.instructor {
 
 section.workshops {
   @extend section.about;
-  padding: unit-space(1) 0;
+  padding: unit-space(1) 0 unit-space(2) 0;
   text-align: center;
   h1 {
     @extend h2;
@@ -228,5 +228,51 @@ section.extra-info {
     color: $alt-color;
     text-decoration: none;
     border-bottom: 1px solid $alt-color;
+  }
+}
+
+section.companies {
+  padding-top: 0;
+  h2 {
+    text-align: center;
+    color: $alt-color;
+    margin-bottom: unit-space(2);
+  }
+  .company-featured {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    color: #fff;
+    li {
+      display: block;
+      &:before {
+        content: '';
+        display: block;
+        width: 200px;
+        height: 80px;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      $companies: 'aa' 'ae' 'rh' 'bm' 'cg' 'ic' 'gr' 'do' 'cr' 'ms' 'pe' 'ro' 'in' 'un';
+
+      @each $company in $companies {
+        &.#{$company}:before {
+          background-image: url(images/logos/#{$company}.png);
+        }
+      }
+    }
+  }
+  .company-text {
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 5px;
+      color: lighten($text-color, 20);
+      &:nth-child(even) {
+        color: lighten($text-color, 5);
+      }
+    }
   }
 }
