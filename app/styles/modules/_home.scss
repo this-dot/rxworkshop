@@ -29,6 +29,18 @@ section.about {
   }
 }
 
+section.trailer-section {
+  padding-top: 0;
+  text-align: center;
+  h2 {
+    color: $text-color;
+    margin-bottom: 50px;
+    border-bottom: 2px solid $text-color;
+    padding: 5px;
+    display: inline-block;
+  }
+}
+
 .content-box {
   padding: unit-space(1);
   border: 3px solid $main-color;
