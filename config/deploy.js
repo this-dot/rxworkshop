@@ -23,7 +23,8 @@ module.exports = function(deployTarget) {
       key: 'fastboot-release.json'
     };
     ENV['gcloud-storage'] = {
-        bucket: 'rxworkshop-assets'
+      bucket: 'rxworkshop-assets',
+      project: 'rxworkshop-149519'
     };
   }
 
