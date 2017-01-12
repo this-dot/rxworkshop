@@ -1,5 +1,6 @@
 @import 'foundation/all';
 @import 'modules/home';
+@import 'modules/footer';
 
 body {
   @include body-copy();
@@ -90,10 +91,8 @@ body {
   }
 }
 
-.app-footer {
+.app-contact {
   .contact {
-    border-top: 1px solid $contrast-color;
-    border-bottom: 1px solid $contrast-color;
     padding: unit-space(1);
     .subscribe-form {
       h2 {
@@ -125,7 +124,6 @@ body {
     @include tablet() {
       .subscribe-form {
         padding: unit-space(1);
-        border-right: 1px solid $contrast-color;
       }
       .email-us {
         padding: unit-space(1);
@@ -141,29 +139,6 @@ body {
       }
     }
   }
-  .branding {
-    padding: unit-space(1) 0;
-    font-size: 14px;
-    line-height: 22px;
-
-    @include desktop() {
-      padding: unit-space(2) 0;
-      .brand-text {
-        margin-left: unit-space(2);
-        max-width: 38%;
-      }
-    }
-  }
-}
-
-.this-dot-logo {
-  background: url(images/this-dot-media-logo-small.svg) no-repeat;
-  width: 118px;
-  height: 118px;
-  background-size: contain;
-  text-indent: -10000px;
-  overflow: hidden;
-  display: inline-block;
 }
 
 .padding-top-50 {
