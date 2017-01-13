@@ -1,0 +1,55 @@
+.app-footer {
+  background: #626D8E;
+  padding: unit-space(4) 0;
+  color: #fff;
+
+  h3 {
+    a {
+      @include title-type();
+      font-family: $body-font;
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+    }
+  }
+  .links {
+    border-top: 1px solid #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    a {
+      text-transform: uppercase;
+      color: #fff;
+      margin: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+  .col-md-3 {
+    box-sizing: border-box;
+    @include tablet() {
+      width: 25%;
+    }
+  }
+  .col-md-5 {
+    box-sizing: border-box;
+    @include tablet() {
+      width: 41.66%;
+    }
+  }
+  .col-md-6 {
+    box-sizing: border-box;
+    @include tablet() {
+      width: 50%;
+      margin-left: 5%;
+    }
+  }
+  .col-md-8 {
+    box-sizing: border-box;
+    @include tablet() {
+      width: 66%;
+    }
+  }
+}
+.this-dot-dot {
+  @include makeLogo('images/this-dot-o.svg', 142px, 80px);
+}
