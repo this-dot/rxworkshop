@@ -11,7 +11,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "GCLOUD_PROJECT=rxworkshop-149519 ember deploy production"
+    "deploy": "GCLOUD_PROJECT=this-dot ember deploy production"
   },
   "repository": "",
   "engines": {

@@ -4,7 +4,7 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    prepend: 'https://storage.googleapis.com/rxworkshop-assets/'
+    prepend: 'https://storage.googleapis.com/rxworkshop/'
   });
 
   // Use `app.import` to add additional libraries to the generated
