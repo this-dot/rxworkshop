@@ -21,7 +21,7 @@ export default {
       location: 'Online',
       link: online
     })),
-    ['2017-06-12 08:00:00'].map(date => doc('event', {
+    ['2017-06-12 08:00:00'].map(() => doc('event', {
       date: 'Recorded',
       price: 450,
       location: 'Recorded',
