@@ -51,6 +51,7 @@
     "ember-moment": "6.1.0",
     "ember-resolver": "^2.0.3",
     "ember-scroll-to": "0.5.4",
-    "loader.js": "^4.0.10"
+    "loader.js": "^4.0.10",
+    "ember-intercom-io": "0.1.3"
   }
 }
