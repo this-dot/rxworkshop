@@ -9,13 +9,13 @@ const onlineVideo = 'https://www.eventbrite.com/e/managing-async-with-rxjs-5-rec
 
 export default {
   data: [].concat(
-    ['2017-06-24 08:00:00', '2017-09-16 08:00:00'].map(date => doc('event', {
+    ['2017-06-24 09:00:00', '2017-09-09 09:00:00'].map(date => doc('event', {
       date: iso(date),
       price: 595,
       location: 'Silicon Valley',
       link: siliconValley
     })),
-    ['2017-04-13 08:00:00', '2017-08-12 08:00:00'].map(date => doc('event', {
+    ['2017-04-13 08:00:00', '2017-06-24 09:00:00', '2017-08-12 08:00:00', '2017-09-09 09:00:00'].map(date => doc('event', {
       date: iso(date),
       price: 495,
       location: 'Online',
