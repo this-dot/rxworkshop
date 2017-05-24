@@ -2,21 +2,28 @@ $tablet-width: 768px;
 $desktop-width: 1024px;
 
 // Titles styles
-$title-font: 'Karla', sans-serif;
-$title-size: 16px;
-$title-line-height: 20px;
+$title-font: 'Raleway', sans-serif;
+$title-size: 32px;
+$title-line-height: 40px;
 
 // Body copy
-$body-font: 'Karla', sans-serif;
-$body-size: 22px;
-$body-line-height: 26px;
+$body-font: 'Raleway', sans-serif;
+$body-size: 18px;
+$body-line-height: 27px;
 
 // Layout
 $content-column-width: 600px;
 
 // Colors
-$main-color: #D2008F;
-$alt-color: #3C1B51;
+$main-color: #626D8E;
+$alt-color: #7CBFC4;
+$dark-alt-color: darken($alt-color, 20);
+$action-color: #F46663;
+
 $contrast-color: #CCCCCC;
-$text-color: #4D4D4D;
-$header-color: #fff;
+$text-color: #515A77;
+$title-color: #374056;
+
+$bright-color: #FFC064;
+$bright-color-alt: #D3D16C;
+$calm-color: #A3DDE5;

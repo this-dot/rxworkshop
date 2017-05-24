@@ -1,29 +1,25 @@
-.row {
-  display: block;
-  box-sizing: border-box;
+$enable-flex: true;
+@import 'bootstrap-grid';
 
-  @include tablet() {
-    display: flex;
-    flex-flow: row nowrap;
-    .main-col {
-      width: 61.8%;
-      box-sizing: border-box;
-    }
-    .aside-col {
-      width: 38.2%;
-      box-sizing: border-box;
+$col-sizes: 1 2 3 4 5 6 7 8 9 10 11 12;
+
+@each $size in $col-sizes {
+  .col-md-#{$size}, .col-lg-#{$size} {
+    box-sizing: border-box;
+    img {
+      max-width: 100%;
     }
   }
 }
 
-.wrap {
-  padding: 0 unit-space(1);
-  @include desktop() {
-    max-width: 1080px;
-    margin-left: auto;
-    margin-right: auto;
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
   }
-  img {
-    max-width: 100%;
-  }
+}
+
+.hide {
+  display: none;
 }

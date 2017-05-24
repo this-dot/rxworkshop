@@ -1,99 +1,15 @@
 @import 'foundation/all';
 @import 'modules/home';
+@import 'modules/header';
 @import 'modules/footer';
 
 body {
   @include body-copy();
 }
 
-.app-header {
-  background: $alt-color;
-  color: $contrast-color;
-  padding: unit-space(2) 0;
-  ul {
-    li {
-      display: block;
-      text-align: left;
-    }
-    @include tablet() {
-      text-align: left;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-    @include desktop() {
-      li.optional {
-        display: block;
-      }
-    }
-    @include mobileOnly() {
-      br {
-        display: none;
-      }
-      li {
-        margin: unit-space(0.5) 0;
-      }
-      .button {
-        margin-top: unit-space(1);
-      }
-    }
-  }
-  .logo {
-    color: #fff;
-  }
-  li {
-    &:first-child {
-      align-self: flex-start;
-    }
-    em {
-      color: $main-color;
-      font-style: normal;
-      font-weight: bold;
-    }
-    .button {
-      color: #fff;
-      border-color: #fff;
-    }
-  }
-}
-
-.logo {
-  line-height: 75px;
-  font-size: 36px;
-  text-transform: uppercase;
-  text-align: left;
-
-  strong {
-    font-weight: bold;
-  }
-
-  &:before {
-    background: url(images/rx-logo.png) no-repeat;
-    background-size: 75px 75px;
-    display: inline-block;
-    width: 75px;
-    height: 75px;
-    float: left;
-    content: "";
-    margin-right: unit-space(1);
-  }
-
-  @include mobileOnly() {
-    display: inline-block;
-    font-size: 24px;
-    line-height: 40px;
-    &:before {
-      background-size: 40px 40px;
-      width: 40px;
-      height: 40px;
-    }
-  }
-}
-
 .app-contact {
+  margin-top: unit-space(2);
   .contact {
-    padding: unit-space(1);
     .subscribe-form {
       h2 {
         color: $main-color;
@@ -101,6 +17,7 @@ body {
       .input-text {
         border-color: $main-color;
         margin: unit-space(1) 0;
+        width: 100%;
       }
       .button {
         color: $main-color;
@@ -109,38 +26,20 @@ body {
       }
     }
     .email-us {
-      font-style: italic;
       a {
         color: $main-color;
+        font-weight: bold;
+        text-decoration: none;
+        border-bottom: 1px solid $main-color;
+        display: inline-block;
+        margin-top: unit-space(1);
       }
     }
     @include mobileOnly() {
       text-align: center;
       padding-top: unit-space(2);
-      .email-us {
-        margin: unit-space(2) 0;
-      }
     }
-    @include tablet() {
-      .subscribe-form {
-        padding: unit-space(1);
-      }
-      .email-us {
-        padding: unit-space(1);
-      }
-    }
-    @include desktop() {
-      .subscribe-form, .email-us {
-        padding: unit-space(3) unit-space(2);
-      }
-      .subscribe-form .input-text {
-        width: 80%;
-        margin-right: unit-space(1);
-      }
-    }
+
   }
 }
 
-.padding-top-50 {
-  padding-top: 50px;
-}

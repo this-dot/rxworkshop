@@ -1,37 +1,31 @@
 section.about {
-  background: #F2F2F2 linear-gradient(90deg, #fff, #F2F2F2);
-  padding: unit-space(2) 0;
-
-  @include desktop() {
-    padding: unit-space(5) 0;
-  }
+  padding-top: unit-space(2);
 
   h2 {
-    color: $main-color;
+    color: $dark-alt-color;
+  }
+
+  .content-box {
+    border-color: lighten($alt-color, 20);
   }
 
   aside {
     p {
-      color: saturate($main-color, 20);
-      font-style: italic;
+      color: darken($alt-color, 20);
     }
     footer {
-      color: darken($main-color, 20);
+      color: desaturate($main-color, 20);
       font-size: 18px;
     }
     strong {
       font-weight: bold;
     }
-    @include tablet() {
-      padding: unit-space(3) unit-space(2);
-      padding: unit-space(2);
-    }
   }
 }
 
 section.trailer-section {
-  padding-top: 0;
   text-align: center;
+  margin-top: unit-space(2);
   h2 {
     color: $text-color;
     margin-bottom: 50px;
@@ -57,7 +51,7 @@ section.trailer-section {
 }
 
 section.youll-learn {
-  background: desaturate($main-color, 15);
+  background: $main-color;
   padding: 50px 0;
   text-align: center;
   h2 {
@@ -93,56 +87,48 @@ section.youll-learn {
 
 section.instructor {
   padding: unit-space(2) 0;
-  color: $contrast-color;
-  background: $alt-color;
-
-  @include mobileOnly() {
-    background: linear-gradient(0deg, $alt-color 70%, rgba($alt-color, 0) 80%), url(images/ben.jpg) no-repeat center top;
-    background-size: contain;
-    padding-top: 50%;
-  }
-
-  @include tablet() {
-    background: linear-gradient(90deg, $alt-color 50%, rgba($alt-color, 0) 60%), url(images/ben.jpg) no-repeat right center;
-  }
-
-  @include desktop() {
-    background: linear-gradient(90deg, $alt-color 60%, rgba($alt-color, 0) 70%), url(images/ben.jpg) no-repeat right center;
-    padding: unit-space(5) 0;
-    background-size: contain;
-  }
-
-  .main-col {
-    padding: unit-space(1);
-    @include tablet() {
-      padding: unit-space(2);
-    }
-  }
+  margin: unit-space(2) 0;
+  background: lighten($alt-color, 30);
 
   h2 {
-    color: $main-color;
+    color: $alt-color;
   }
 
   h3 {
-    color: #fff;
+    color: $dark-alt-color;
     font-size: 32px;
-    margin-top: 20px;
+    text-transform: none;
+    margin: unit-space(0.5) 0 unit-space(1) 0;
+    padding: unit-space(0.5) 0;
+    display: inline-block;
+    border-bottom: 2px solid $action-color;
+    a {
+      color: $dark-alt-color;
+      text-decoration: none;
+    }
+  }
+  .avatar {
+    img {
+      border-radius: 400px;
+      max-width: 300px;
+    }
+  }
+  .instructor-name {
+    text-align: center;
   }
 }
 
 section.workshops {
-  @extend section.about;
-  padding: unit-space(1) 0 unit-space(2) 0;
+  // @extend section.about;
+  padding: unit-space(1) 0 unit-space(1) 0;
   text-align: center;
   h1 {
-    @extend h2;
-    padding: unit-space(1) unit-space(2);
-    border-bottom: 2px solid $main-color;
-    padding: 5px;
-    display: inline-block;
-    @include desktop() {
-      margin: unit-space(1) unit-space(3);
-    }
+    text-align: center;
+    display: inline;
+    color:$action-color;;
+    border-bottom: 2px solid $alt-color;
+    padding-bottom: 2px;
+    font-weight: bold;
   }
   small {
     font-size: 80%;
@@ -220,19 +206,15 @@ section.workshops {
 }
 
 section.extra-info {
-  @extend .about;
-  padding-top: 0;
-
-  $extra-alt:  saturate($alt-color, 20);
   h2 {
-    color: $extra-alt;
+    color: $dark-alt-color;
   }
   .content-box {
-    border-color: $extra-alt;
+    border-color: lighten($alt-color, 20);
   }
   .extra-box {
     h2 {
-      color: $extra-alt;
+      color: $dark-alt-color;
     }
   }
 
@@ -241,10 +223,13 @@ section.extra-info {
     text-decoration: none;
     border-bottom: 1px solid $alt-color;
   }
+  img {
+    max-width: 100%;
+  }
 }
 
 section.companies {
-  padding-top: 0;
+  margin-top: unit-space(2);
   h2 {
     text-align: center;
     color: $alt-color;

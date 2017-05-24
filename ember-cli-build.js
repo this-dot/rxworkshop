@@ -6,6 +6,11 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     fingerprint: {
       prepend: 'https://storage.googleapis.com/rxworkshop/'
+    },
+    sassOptions: {
+      includePaths: [
+        'bower_components/bootstrap/scss'
+      ]
     }
   });
 
