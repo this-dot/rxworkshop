@@ -37,11 +37,8 @@
   <div class="wrap">
     <h1>Upcoming Workshops</h1>
 
-    <div class="workshops-list row">
-      {{#each (sort-by "date" model) as |event|}}
-        {{workshop-card model=event}}
-      {{/each}}
-    </div>
+    {{tickets-counter events=model}}
+
     <div class="private-workshop">
       <p>
         <strong>Need a private workshop?</strong> Request one <a href="mailto:hi@rxworkshop.com">here</a>.

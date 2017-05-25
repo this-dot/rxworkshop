@@ -1,20 +1,10 @@
-<div class="workshop {{dasherize model.location}}">
-  <h4>{{model.location}}</h4>
-  <dl>
-    <dt>When:</dt>
-    {{#if validDate}}
-    <dd>
-      {{moment-format model.date 'MMM Do YYYY'}}<br>
-      <small>{{moment-format model.date 'ha z' timeZone='America/Los_Angeles'}}</small>
-    </dd>
-    {{else}}
-    <dd>
-      {{viewable}}<br>
-      <small>-</small>
-    </dd>
-    {{/if}}
-    <dt>Cost:</dt>
-    <dd>${{model.price}}</dd>
-  </dl>
-  <a href={{model.link}} class="button" target="_blank">Purchase</a>
-</div>
+<strong>
+  {{#if isRecorded}}
+    Always Available
+  {{else}}
+    {{moment-format model.date 'MMM Do YYYY'}}
+    <small>{{moment-format model.date 'ha z' timeZone='America/Los_Angeles'}}</small>
+  {{/if}}
+</strong>
+
+<a href={{model.link}} class="button" target="_blank">Purchase</a>

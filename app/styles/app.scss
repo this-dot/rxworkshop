@@ -2,6 +2,7 @@
 @import 'modules/home';
 @import 'modules/header';
 @import 'modules/footer';
+@import 'modules/tickets-counter';
 
 body {
   @include body-copy();
