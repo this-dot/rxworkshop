@@ -1,0 +1,90 @@
+.tickets-counter {
+  margin-top: unit-space(2);
+  margin-bottom: unit-space(2);
+}
+
+.workshop {
+  border: 3px solid $main-color;
+  text-align: center;
+  margin: unit-space(1) 0;
+  min-width: 200px;
+  h4 {
+    background: $main-color;
+    color: #fff;
+    padding: unit-space(0.5) unit-space(1);
+    text-transform: uppercase;
+  }
+  dl {
+    padding: unit-space(1);
+    dt {
+      display: none;
+    }
+    dd {
+      padding: unit-space(1) 0 0 0;
+    }
+  }
+  .button {
+    color: #fff;
+    text-transform: none;
+    background: $alt-color;
+    border: none;
+    margin: unit-space(1);
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background 100ms ease-out;
+    &:hover {
+      background: $action-color;
+    }
+  }
+  &.recorded {
+    border-color: $dark-alt-color;
+    h4 {
+      background: $dark-alt-color;
+    }
+  }
+}
+@include tablet() {
+  .workshops-list {
+    justify-content: center;
+  }
+  .workshop {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+@include desktop() {
+  .workshop {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+.private-workshop {
+  text-align: center;
+  p {
+    display: inline-block;
+    padding: 20px 5px;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+  }
+  strong {
+    font-weight: bold;
+  }
+  a {
+    color: $main-color;
+    text-decoration: none;
+    border-bottom: 1px solid $main-color;
+    font-weight: bold;
+  }
+}
+  
+.workshop-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  strong {
+    margin: unit-space(1);
+  }
+  &:nth-child(even) {
+    background: #f4f5f7;
+  }
+}

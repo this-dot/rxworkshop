@@ -1,0 +1,83 @@
+.app-header {
+  color: $main-color;
+  padding: unit-space(2) 0;
+  ul {
+    li {
+      display: block;
+      text-align: left;
+    }
+    @include tablet() {
+      text-align: left;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include desktop() {
+      li.optional {
+        display: block;
+      }
+    }
+    @include mobileOnly() {
+      br {
+        display: none;
+      }
+      li {
+        margin: unit-space(0.5) 0;
+      }
+      .button {
+        margin-top: unit-space(1);
+      }
+    }
+  }
+  .logo {
+    color: $main-color;
+  }
+  li {
+    &:first-child {
+      align-self: flex-start;
+    }
+    em {
+      color: $main-color;
+      font-style: normal;
+      font-weight: bold;
+    }
+    .button {
+      color: $action-color;
+      border-color: $action-color;
+    }
+  }
+}
+
+.logo {
+  line-height: 75px;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: left;
+
+  strong {
+    font-weight: bold;
+  }
+
+  &:before {
+    background: url(images/rx-logo.png) no-repeat;
+    background-size: 75px 75px;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    float: left;
+    content: "";
+    margin-right: unit-space(1);
+  }
+
+  @include mobileOnly() {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 40px;
+    &:before {
+      background-size: 40px 40px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

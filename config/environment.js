@@ -22,6 +22,10 @@ module.exports = function(environment) {
       // when it is created
     },
 
+    googleFonts: [
+      'Raleway:500,500i,600,600i'
+    ],
+
     moment: {
       includeTimezone: 'all'
     },

@@ -1,55 +1,52 @@
 .app-footer {
-  background: #626D8E;
-  padding: unit-space(4) 0;
+  background: $main-color;
+  padding: unit-space(3) 0 unit-space(1) 0;
+  margin-top: unit-space(3);
   color: #fff;
 
-  h3 {
-    a {
-      @include title-type();
-      font-family: $body-font;
-      color: #fff;
-      text-decoration: none;
-      font-size: 24px;
+  .row {
+    border-top: 2px solid lighten($main-color, 5);
+    padding-top: unit-space(1);
+    padding-bottom: unit-space(1);
+    @include desktop() {
+      padding-top: unit-space(2);
+      padding-bottom: unit-space(2);
+    }
+    p {
+      margin: 0;
+    }
+    &:first-child {
+      padding-top: 0;
+      border-top: none;
     }
   }
+  .logo-column {
+    margin: unit-space(1) 0;
+    @include tablet() {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      margin-bottom: 0;
+    }
+  }
+
   .links {
-    border-top: 1px solid #fff;
-    margin-top: 20px;
-    font-size: 18px;
     a {
-      text-transform: uppercase;
       color: #fff;
-      margin: 20px;
-      font-weight: bold;
+      text-transform: uppercase;
       text-decoration: none;
+      font-weight: bold;
+      margin: 0 unit-space(0.5);
+    }
+    .social {
+      @include tablet() {
+        float: right;
+      }
     }
   }
-  .col-md-3 {
-    box-sizing: border-box;
-    @include tablet() {
-      width: 25%;
-    }
+  .legal {
+    border: none;
+    padding-top: 0;
+    font-size: 16px;
   }
-  .col-md-5 {
-    box-sizing: border-box;
-    @include tablet() {
-      width: 41.66%;
-    }
-  }
-  .col-md-6 {
-    box-sizing: border-box;
-    @include tablet() {
-      width: 50%;
-      margin-left: 5%;
-    }
-  }
-  .col-md-8 {
-    box-sizing: border-box;
-    @include tablet() {
-      width: 66%;
-    }
-  }
-}
-.this-dot-dot {
-  @include makeLogo('images/this-dot-o.svg', 142px, 80px);
 }
