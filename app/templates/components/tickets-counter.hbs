@@ -10,18 +10,18 @@
         </div>
     </div>
     <div class="col-md-6">
-        <div class="workshop silicon-valley">
-            <h4>In-person @ Silicon Valley</h4>
-            <ul>
-                {{#each siliconValleyEvents as |event|}}
-                    {{workshop-card model=event tagName="li"}}
-                {{/each}}
-            </ul>
-        </div>
         <div class="workshop recorded">
             <h4>Recorded version</h4>
             <ul>
                 {{#each recordedEvents as |event|}}
+                    {{workshop-card model=event tagName="li"}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="workshop silicon-valley">
+            <h4>In-person @ Silicon Valley</h4>
+            <ul>
+                {{#each siliconValleyEvents as |event|}}
                     {{workshop-card model=event tagName="li"}}
                 {{/each}}
             </ul>
