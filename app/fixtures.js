@@ -5,7 +5,7 @@ const { guidFor } = Ember;
 
 const online = 'https://www.eventbrite.com/e/online-managing-async-with-rxjs-5-tickets-29383184897';
 const siliconValley = 'https://www.eventbrite.com/e/silicon-valley-managing-async-with-rxjs-5-tickets-29383246080';
-const onlineVideo = 'https://www.eventbrite.com/e/managing-async-with-rxjs-5-recorded-workshop-tickets-33215243688';
+const onlineVideo = 'https://www.eventbrite.com/e/managing-async-with-rxjs-5-recorded-workshop-june-august-tickets-35382958381';
 
 export default {
   data: [].concat(
