@@ -12,7 +12,8 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test"
+    "test": "ember test",
+    "deploy": "GCLOUD_PROJECT=this-dot ember deploy production"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -52,7 +53,7 @@
     "ember-scroll-to": "0.5.4"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 7"
   },
   "private": true
 }
