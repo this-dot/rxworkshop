@@ -28,12 +28,7 @@ module.exports = function(environment) {
 
     moment: {
       includeTimezone: 'all'
-    },
-
-    intercom: {
-      appId: 'o8q1jqm4',
-      enabled: false
-     }
+    }
   };
 
   if (environment === 'development') {
@@ -69,8 +64,6 @@ module.exports = function(environment) {
         }
       ]
     };
-
-    ENV.intercom.enabled = true;
   }
 
   return ENV;

@@ -16,7 +16,7 @@
     "deploy": "GCLOUD_PROJECT=this-dot ember deploy production"
   },
   "devDependencies": {
-    "broccoli-asset-rev": "^2.4.5",
+    "broccoli-asset-rev": "^2.5.0",
     "ember-ajax": "^3.0.0",
     "ember-chimp": "0.1.0",
     "ember-cli": "2.13.2",
@@ -28,7 +28,6 @@
     "ember-cli-deploy-build": "1.1.0",
     "ember-cli-deploy-gcloud": "0.4.0",
     "ember-cli-deploy-gcloud-storage": "0.2.0",
-    "ember-cli-fastboot": "1.0.0-rc.3",
     "ember-cli-google-fonts": "2.11.0",
     "ember-cli-eslint": "^3.0.0",
     "ember-cli-htmlbars": "^2.0.2",
@@ -51,6 +50,9 @@
     "ember-source": "~2.13.0",
     "loader.js": "^4.2.3",
     "ember-scroll-to": "0.5.4"
+  },
+  "dependencies": {
+    "ember-cli-fastboot": "1.0.0-rc.3"    
   },
   "engines": {
     "node": ">= 7"
