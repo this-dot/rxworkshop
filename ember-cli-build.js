@@ -9,7 +9,7 @@ module.exports = function(defaults) {
       replaceExtensions: ['html', 'js', 'css', 'json'],
       exclude: ['assets/assetMap.json'],
       ignore: ['assets/assetMap.json'],
-      prepend: '//storage.googleapis.com/this-dot-assets/'
+      prepend: '//storage.googleapis.com/rxworkshop/'
     },
     sassOptions: {
       includePaths: [
