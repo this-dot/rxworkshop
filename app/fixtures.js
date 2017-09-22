@@ -3,20 +3,20 @@ import Ember from 'ember';
 
 const { guidFor } = Ember;
 
-const online = 'https://www.eventbrite.com/e/online-managing-async-with-rxjs-5-tickets-29383184897';
-const siliconValley = 'https://www.eventbrite.com/e/silicon-valley-managing-async-with-rxjs-5-tickets-29383246080';
+const online = 'https://www.eventbrite.com/e/online-managing-async-with-rxjs-5-with-ben-lesh-tickets-37886331036?aff=es2';
+const siliconValley = 'https://www.eventbrite.com/e/silicon-valley-managing-async-with-rxjs-5-with-ben-lesh-tickets-37884705173?aff=erelpanelorg';
 const onlineVideo = 'https://www.eventbrite.com/e/managing-async-with-rxjs-5-pre-recorded-workshop-tickets-37538417417';
 
 export default function() {
   return {
     data: [].concat(
-      ['2017-09-09 09:00:00'].map((date) => doc('event', {
+      ['2017-12-02 08:30:00'].map((date) => doc('event', {
         date: iso(date),
         price: 595,
         location: 'Silicon Valley',
         link: siliconValley
       })),
-      ['2017-09-09 09:00:00'].map(date => doc('event', {
+      ['2017-12-02 08:30:00'].map(date => doc('event', {
         date: iso(date),
         price: 495,
         location: 'Online',
