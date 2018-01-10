@@ -41,6 +41,10 @@ section.trailer-section {
   @include tablet() {
     padding: unit-space(2);
   }
+  .attention {
+    font-style: italic;
+    font-weight: bold;
+  }
 }
 
 .extra-box {

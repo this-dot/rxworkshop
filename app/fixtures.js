@@ -3,36 +3,39 @@ import Ember from 'ember';
 
 const { guidFor } = Ember;
 
-const online = 'https://www.eventbrite.com/e/online-managing-async-with-rxjs-5-with-ben-lesh-tickets-37886331036?aff=es2';
-const siliconValley = 'https://www.eventbrite.com/e/silicon-valley-managing-async-with-rxjs-5-with-ben-lesh-tickets-37884705173?aff=erelpanelorg';
-const onlineVideo = 'https://www.eventbrite.com/e/managing-async-with-rxjs-5-pre-recorded-workshop-tickets-37538417417';
 
 export default function() {
   return {
     data: [].concat(
-      ['2017-12-02 08:30:00'].map((date) => doc('event', {
+      ['2018-03-10 08:00:00'].map((date) => doc('event', {
         date: iso(date),
         price: 595,
-        location: 'Silicon Valley',
-        link: siliconValley
+        location: ['Silicon Valley', 'Online'],
+        link: 'https://www.eventbrite.com/e/rxworkshop-55-w-rxjs-author-ben-lesh-online-or-in-person-silicon-valley-tickets-42015467394'
       })),
-      ['2017-12-02 08:30:00'].map(date => doc('event', {
+      ['2018-06-09 08:00:00'].map((date) => doc('event', {
         date: iso(date),
-        price: 495,
-        location: 'Online',
-        link: online
+        price: 595,
+        location: ['Silicon Valley', 'Online'],
+        link: 'https://www.eventbrite.com/e/rxworkshop-55-w-rxjs-author-ben-lesh-online-or-in-person-silicon-valley-tickets-42015468397'
+      })),
+      ['2018-09-08 08:00:00'].map((date) => doc('event', {
+        date: iso(date),
+        price: 595,
+        location: ['Silicon Valley', 'Online'],
+        link: 'https://www.eventbrite.com/e/rxworkshop-55-w-rxjs-author-ben-lesh-online-or-in-person-silicon-valley-tickets-42015469400'
       })),
       [
         doc('event', {
           date: null,
           price: 450,
           location: 'Recorded',
-          link: onlineVideo
+          link: 'https://www.eventbrite.com/e/managing-async-with-rxjs-55-pre-recorded-workshop-tickets-42014310935'
         })
       ]
     )
   };
-};
+}
 
 function iso(date) {
   return moment.tz(date, 'America/Los_Angeles').format();
