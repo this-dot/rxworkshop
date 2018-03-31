@@ -7,12 +7,6 @@ const { guidFor } = Ember;
 export default function() {
   return {
     data: [].concat(
-      ['2018-03-10 08:00:00'].map((date) => doc('event', {
-        date: iso(date),
-        price: 595,
-        location: ['Silicon Valley', 'Online'],
-        link: 'https://www.eventbrite.com/e/rxworkshop-55-w-rxjs-author-ben-lesh-online-or-in-person-silicon-valley-tickets-42015467394'
-      })),
       ['2018-06-09 08:00:00'].map((date) => doc('event', {
         date: iso(date),
         price: 595,
